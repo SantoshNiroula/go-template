@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templetaing</title>
+    <script src="https://unpkg.com/htmx.org@2.0.3"
+        integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="text-center">
+        <button
+            class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded text-center"
+            hx-get="/todos/" 
+            hx-indicator="#indicator"
+            hx-swap="outerHTML">
+            Fetch Todo
+        </button>
+        <span class="htmx-indicator" id="indicator">
+            <img  class="htmx-indicator m-auto" src="images/loading.gif" />
+        </span>
+    </div>
+
+</body>
+
+</html>

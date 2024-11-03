@@ -1,0 +1,12 @@
+<div class="space-y-4 p-4">
+    <h2 class="text-2xl font-bold text-blue-900 text-center mb-4">{{ .PageTitle }}</h2>
+    {{ range .Todos }}
+    <div class="flex items-center p-4 bg-blue-100 rounded-lg shadow-md max-w-md mx-auto">
+        <input type="checkbox" class="mr-4 h-5 w-5 text-blue-500 rounded focus:ring-2 focus:ring-blue-400" {{ if .Done
+            }} checked {{ end }} />
+        <div>
+            <h3 class="text-lg font-semibold text-blue-900">{{ .Title }}</h3>
+        </div>
+    </div>
+    {{ end }}
+</div>
